@@ -1,0 +1,21 @@
+<body>
+
+    <% @posts.each do |post| %>
+
+        <%= image_tag(post.photo, width: 200) if post.photo.attached? %><br>
+        <td>Name: <%= post.title %></td><br>
+        <td><%= post.body %></td>
+
+        <td><%= link_to 'See profile', post %></td>
+<!--        <td><%#= link_to 'Edit', edit_post_path(post) %></td>-->
+<!--        <td><%#= link_to 'Destroy', post, method: :delete, data: { confirm: 'Are you sure?' } %></td>-->
+<!--      </tr>-->
+    <% end %>
+
+    <p id="notice"><%= notice %></p>
+<!--  </tbody>-->
+<!--</table>-->
+
+<br>
+
+</body>
